@@ -10,45 +10,40 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Media Management Platform',
+      title: 'Hotel Reviews Management System',
+      link:'https://github.com/Shreyas-Yadav/Hotel-Reviews-System',
       description: [
-        'This project aimed to tackle the complexities of media planning across diverse channels, where challenges such as errors and compliance issues frequently arise. These hurdles often result in time-consuming tasks and potential regulatory risks, diverting attention away from strategic thinking and creative endeavours.',
-        'Our objective was to streamline the media planning process, minimizing errors and ensuring compliance, allowing teams to focus on strategic decision-making and creativity.'
+        'Developed a full-stack hotel review platform using Java (Jetty/Servlets) for the backend and JavaScript (Fetch API) for the frontend, enabling users to search hotels, read/write reviews, and manage accounts securely.',
+        'Implemented a MySQL-backed data management system with JDBC for storing hotel reviews and user preferences, including authentication and access control.',
+        'Enhanced user experience with dynamic AJAX updates for fetching reviews, liking comments, and managing favorite hotels without page reloads, improving interactivity and responsiveness.'
       ],
-      techStack: ['Angular', '.NET Framework', 'SQL Server', 'Microsoft IIS', 'Firebase', 'CI/CD'],
-      image: '/assets/media-management-platform.webp',
+      techStack: ['Java', 'Jetty Server', 'MySQL', 'HTML/CSS/JS/Bootstrap'],
+      image: '/assets/Hotel-Reviews.png',
       aosImage: 'fade-right'
     },
     {
-      title: 'Smile Analysis Web Application',
+      title: 'Airbnb Clone',
+      link:'https://github.com/Shreyas-Yadav/Airbnb_Project',
       description: [
-        'Developed and deployed a smile detection application for elderly residents in Japanese old age homes using computer vision and machine learning algorithms.',
-        'Designed and implemented a user-friendly interface using Angular with Flask backend to analyze smiles in real-time.'
+        'Implemented secure user authentication and authorization using the MERN Stack (MongoDB, Express.js, React, Node.js), including email/password registration, login, and profile management with JWT token validation.',
+        'Property Listings and Search Functionality: Enabled hosts to list properties with detailed descriptions, images, and pricing, while providing guests with advanced search filters to find accommodations that meet their preferences.',
+        'Booking System and In-App Messaging: Developed a booking system for guests to reserve properties and integrated an in-app messaging feature to facilitate communication between hosts and guests, enhancing the overall user experience.'
       ],
-      techStack: ['Angular', 'Python', 'SQL Server', 'AWS'],
-      image: '/assets/smile-project.webp',
+      techStack: ['React', 'Node', 'Express', 'MongoDB'],
+      image: '/assets/Airbnb-Logo-2014.png',
       aosImage: 'fade-left'
     },
     {
-      title: 'AI Receptionist',
+      title: 'AI Chat-Assitant',
+      link:'https://lab02-shreyas-yadav.onrender.com',
       description: [
-        'The project involves the implementation of a receptionist system for tourists and hotel guests, utilizing a multilingual AI avatar.',
-        'The system provides assistance and information to guests in multiple languages, enhancing their overall experience while streamlining hotel operations.'
+        'Developed a real-time chat application using FastAPI and WebSocket for backend, enabling session-based conversations with context preservation.',
+        'Implemented support for multiple LLM models via OpenRouter, allowing users to choose from a variety of models like GPT-4o-mini, Claude-3.5 Sonnet, and Gemini-Flash-Thinking-2.',
+        'Incorporated a feature to check context relevance with prompt and ask users to start a new chat when necessary.',
       ],
-      techStack: ['Node.js', 'Python', 'OpenAI API', 'Nginx'],
-      image: '/assets/ai-receptionist.webp',
+      techStack: ['FastAPI', 'WebSockets', 'Openrouter', 'JS/HTML/CSS'],
+      image: '/assets/chat-bot.png',
       aosImage: 'fade-right'
     },
-    {
-      title: 'DocuQuery AI',
-      description: [
-        'Developed an AI-powered document query system allowing users to upload PDFs and ask questions based on the document content.',
-        'Designed and integrated an Angular-based frontend with a Flask backend for seamless document processing.',
-        'Implemented role-based access control, ensuring only authorized users can manage documents.'
-      ],
-      techStack: ['Angular', 'Tailwind CSS', 'Flask (Python)', 'MongoDB', 'AWS'],
-      image: '/assets/docu-query-ai.webp',
-      aosImage: 'fade-left'
-    }
   ];
 }
