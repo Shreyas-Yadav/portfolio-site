@@ -39,7 +39,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
-    document.body.classList.toggle('no-scroll', this.isMenuOpen);
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    } else {
+      document.body.style.overflow = ''; // Restore scrolling
+    }
   }
 }
