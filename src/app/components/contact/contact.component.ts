@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
   onSubmit(): void {
     if (this.contactForm && this.contactForm.valid) {
       this.isMailSending = true;
-      this.emailService.sebdEmail(this.contactForm.value).subscribe({
+      this.emailService.sendEmail(this.contactForm.value).subscribe({
         next: (data) => {
           this.uploadMessage = data.message;
         },

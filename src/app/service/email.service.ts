@@ -7,16 +7,16 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = '';
-  constructor(private http: HttpClient) {
-    this.apiUrl = environment.API_URL;
-  }
+  private apiUrl = environment.API_URL; // Ensure this is correct
 
-  sebdEmail(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/send-email`, data)
-      .pipe(
-        catchError(this.handleError)
-      );
+  constructor(private http: HttpClient) {}
+
+  sendEmail(data: any): Observable<any> { // Fixed function name
+    console.log('Sending email:', data);
+    console.log('API URL:', this.apiUrl);
+    return this.http.post<any>(`${this.apiUrl}/send-email`, data).pipe(
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {
@@ -26,6 +26,7 @@ export class EmailService {
     } else {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
+    console.error('Email Service Error:', errorMessage);
     return throwError(errorMessage);
   }
 }

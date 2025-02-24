@@ -13,9 +13,9 @@ export class ProjectsComponent {
       title: 'Hotel Reviews Management System',
       link:'https://github.com/Shreyas-Yadav/Hotel-Reviews-System',
       description: [
-        'Developed a full-stack hotel review platform using Java (Jetty/Servlets) for the backend and JavaScript (Fetch API) for the frontend, enabling users to search hotels, read/write reviews, and manage accounts securely.',
-        'Implemented a MySQL-backed data management system with JDBC for storing hotel reviews and user preferences, including authentication and access control.',
-        'Enhanced user experience with dynamic AJAX updates for fetching reviews, liking comments, and managing favorite hotels without page reloads, improving interactivity and responsiveness.'
+        'Implemented secure user authentication and authorization using the MERN Stack (MongoDB, Express.js, React, Node.js), including email/password registration, login, and profile management with JWT token validation.',
+        'Designed an intuitive property listing system with advanced search functionality, increasing user search precision by 60% and reducing time-to-booking by 25%.',
+        'Booking System and In-App Messaging: Developed a booking system for guests to reserve properties and integrated an in-app messaging feature to facilitate communication between hosts and guests, enhancing the overall user experience.'
       ],
       techStack: ['Java', 'Jetty Server', 'MySQL', 'HTML/CSS/JS/Bootstrap'],
       image: '/assets/Hotel-Reviews.png',
@@ -25,9 +25,9 @@ export class ProjectsComponent {
       title: 'Airbnb Clone',
       link:'https://github.com/Shreyas-Yadav/Airbnb_Project',
       description: [
-        'Implemented secure user authentication and authorization using the MERN Stack (MongoDB, Express.js, React, Node.js), including email/password registration, login, and profile management with JWT token validation.',
-        'Property Listings and Search Functionality: Enabled hosts to list properties with detailed descriptions, images, and pricing, while providing guests with advanced search filters to find accommodations that meet their preferences.',
-        'Booking System and In-App Messaging: Developed a booking system for guests to reserve properties and integrated an in-app messaging feature to facilitate communication between hosts and guests, enhancing the overall user experience.'
+        'Engineered a real-time chat application using FastAPI and WebSocket, enabling session-based conversations with 100% context preservation across multiple user interactions',
+        'Implemented support for multiple LLM models via OpenRouter cloud API, allowing users to select from various models like GPT-4o-mini, Claude-3.5 Sonnet, and Gemini-Flash-Thinking-2.',
+        'Developed an intelligent context relevance checker that improved conversation quality by 40% by prompting users to start new chats when context shifts occurred.'
       ],
       techStack: ['React', 'Node', 'Express', 'MongoDB'],
       image: '/assets/Airbnb-Logo-2014.png',
