@@ -13,9 +13,9 @@ export class ProjectsComponent {
       title: 'Hotel Reviews Management System',
       link:'https://github.com/Shreyas-Yadav/Hotel-Reviews-System',
       description: [
-        'Implemented secure user authentication and authorization using the MERN Stack (MongoDB, Express.js, React, Node.js), including email/password registration, login, and profile management with JWT token validation.',
-        'Designed an intuitive property listing system with advanced search functionality, increasing user search precision by 60% and reducing time-to-booking by 25%.',
-        'Booking System and In-App Messaging: Developed a booking system for guests to reserve properties and integrated an in-app messaging feature to facilitate communication between hosts and guests, enhancing the overall user experience.'
+        'Developed a full-stack hotel review platform using Java (Jetty/Servlets) for the backend and JavaScript (Fetch API) for the frontend, enabling users to search hotels, read/write reviews, and manage accounts securely',
+        'Implemented a MySQL-backed data management system with JDBC, reducing query response time by 30% while maintaining data integrity for hotel reviews and user preferences.',
+        'Enhanced user experience with dynamic AJAX updates, decreasing page load times by 50% and improving interactivity for high-traffic features such as review submissions and favorites management.'
       ],
       techStack: ['Java', 'Jetty Server', 'MySQL', 'HTML/CSS/JS/Bootstrap'],
       image: '/assets/Hotel-Reviews.png',
