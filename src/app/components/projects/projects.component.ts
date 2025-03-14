@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { link } from 'node:fs';
 
 @Component({
   selector: 'app-projects',
@@ -21,6 +22,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Self Driving Car',
+      link:'https://youtube.com/shorts/6SXVqx_Jp2A?si=-ABPWS6Prxow2ptN',
       description: [
         'Developed a Raspberry Pi self-driving car with OpenCV lane detection, using thresholding and pixel summation to calculate and stabilize path curvature for motor control. The system was tuned using real-time video feedback and adjustable parameters to optimist lane detection accuracy.',
         'Implemented a modular design for webcam, lane detection, and motor control on a Raspberry Pi, processing real-time video to autonomously steer the vehicle.',
