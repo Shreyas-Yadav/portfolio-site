@@ -20,6 +20,16 @@ export class ProjectsComponent {
       aosImage: 'fade-right'
     },
     {
+      title: 'Self Driving Car',
+      description: [
+        'Developed a Raspberry Pi self-driving car with OpenCV lane detection, using thresholding and pixel summation to calculate and stabilize path curvature for motor control. The system was tuned using real-time video feedback and adjustable parameters to optimist lane detection accuracy.',
+        'Implemented a modular design for webcam, lane detection, and motor control on a Raspberry Pi, processing real-time video to autonomously steer the vehicle.',
+      ],
+      techStack: ['Python', 'NumPy', 'OpenCV','RaspberryPi'],
+      image: '/assets/smart-car.png',
+      aosImage: 'fade-right'
+    },
+    {
       title: 'Wireframe To Code',
       description: [
         'Engineered a full-stack Wireframe-to-Code application by integrating Firebase authentication and OpenRouter API, resulting in 2 times faster prototype development for users converting design mockups to functional code.',
