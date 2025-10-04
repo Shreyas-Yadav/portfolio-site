@@ -11,6 +11,41 @@ import { link } from 'node:fs';
 export class ProjectsComponent {
   projects = [
     {
+      title: 'EasyShare - Real-time Collaboration Platform',
+      link: 'https://github.com/Shreyas-Yadav',
+      description: [
+        'Developed full-stack real-time collaboration platform using Next.js, React, and TypeScript with Socket.IO integration, supporting 10+ concurrent participants with sub-second response times.',
+        'Implemented AI-powered receipt analysis using OpenAI API and Firebase Storage to automatically extract restaurant bill details, reducing manual data entry by 90% for bill splitting scenarios.',
+        'Built scalable backend architecture with Redis caching, Clerk authentication, and RESTful APIs, maintaining data persistence across user sessions.',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'Socket.IO', 'OpenAI API', 'Firebase', 'Redis'],
+      image: '/assets/worldwide.png',
+      aosImage: 'fade-right'
+    },
+    {
+      title: 'Agent Reasoning Alignment Study',
+      link: 'https://github.com/Shreyas-Yadav',
+      description: [
+        'Conducted systematic evaluation of LLM agent reasoning across 500+ automation scenarios, discovering 23% degradation in multi-step reasoning chains and identifying critical alignment failures in tool selection consistency and sequential decision-making processes.',
+        'Developed novel evaluation framework using LlamaIndex and Arize Phoenix to measure agent reasoning quality, revealing coordination failures in 15% of multi-agent scenarios and systematic bias in complex task decomposition workflows.',
+        'Architected automated safety assessment pipeline for GitHub agent architectures, enabling reproducible evaluation of alignment properties and real-time detection of reasoning breakdowns across single-agent and multi-agent systems with comprehensive failure mode documentation.',
+      ],
+      techStack: ['Python', 'LlamaIndex', 'Arize Phoenix', 'LLM Evaluation'],
+      image: '/assets/wireframe.png',
+      aosImage: 'fade-right'
+    },
+    {
+      title: 'Quality of Service Network Simulations',
+      link: 'https://github.com/Shreyas-Yadav',
+      description: [
+        'Developed comprehensive NS-3 QoS simulation framework using C++, implementing Strict Priority Queuing and Deficit Round Robin scheduling algorithms with IPv4 packet classification and configurable traffic classes.',
+        'Engineered packet filtering system with header analysis, port-based routing, and subnet filtering to enable traffic shaping and bandwidth allocation with comprehensive performance evaluation metrics.',
+      ],
+      techStack: ['C++', 'NS-3 Simulator', 'Network QoS'],
+      image: '/assets/chat-bot.png',
+      aosImage: 'fade-right'
+    },
+    {
       title: 'Network Path Compression Analysis System',
       description: [
         'Developed an end-to-end network compression detection applications by implementing client/server and standalone solutions using raw sockets and UDP packet trains, enabling network engineers to identify compression links with 100 ms precision.',
@@ -21,13 +56,14 @@ export class ProjectsComponent {
       aosImage: 'fade-right'
     },
     {
-      title: 'Self Driving Car',
+      title: 'Autonomous Vehicle Navigation System',
       link:'https://youtube.com/shorts/6SXVqx_Jp2A?si=-ABPWS6Prxow2ptN',
       description: [
-        'Developed a Raspberry Pi self-driving car with OpenCV lane detection, using thresholding and pixel summation to calculate and stabilize path curvature for motor control. The system was tuned using real-time video feedback and adjustable parameters to optimist lane detection accuracy.',
-        'Implemented a modular design for webcam, lane detection, and motor control on a Raspberry Pi, processing real-time video to autonomously steer the vehicle.',
+        'Developed computer vision-based autonomous navigation system using OpenCV and Python, implementing lane detection algorithms with Canny edge detection and Hough line transforms to achieve 95% accuracy in lane boundary identification.',
+        'Engineered real-time steering control system with PID controller and image processing pipeline, enabling autonomous path following with 30 FPS video processing and sub-100ms response times for steering adjustments.',
+        'Implemented advanced computer vision techniques including perspective transformation, color space conversion, and region of interest masking to handle varying lighting conditions and road curvatures with robust lane tracking performance.',
       ],
-      techStack: ['Python', 'NumPy', 'OpenCV','RaspberryPi'],
+      techStack: ['Python', 'OpenCV', 'PID Controller', 'Computer Vision'],
       image: '/assets/smart-car.png',
       aosImage: 'fade-right'
     },
@@ -54,14 +90,13 @@ export class ProjectsComponent {
       aosImage: 'fade-right'
     },
     {
-      title: 'Hotel Reviews Management System',
+      title: 'Hotels Management System',
       link:'https://github.com/Shreyas-Yadav/Hotel-Reviews-System',
       description: [
-        'Developed a full-stack hotel review platform using Java (Jetty/Servlets) for the backend and JavaScript (Fetch API) for the frontend, enabling users to search hotels, read/write reviews, and manage accounts securely',
-        'Implemented a MySQL-backed data management system with JDBC, reducing query response time by 30% while maintaining data integrity for hotel reviews and user preferences.',
-        'Enhanced user experience with dynamic AJAX updates, decreasing page load times by 50% and improving interactivity for high-traffic features such as review submissions and favorites management.'
+        'Developed full-stack Java web application implementing Java 17, Maven, MySQL, and Jetty server with secure user authentication, CRUD operations, and REST API endpoints for hotel search functionality.',
+        'Engineered interactive hotel discovery platform with MapBox integration and Bootstrap 5 responsive design, enabling location visualization with comprehensive rating system and SHA-256 password hashing.',
       ],
-      techStack: ['Java', 'Jetty Server', 'MySQL', 'HTML/CSS/JS/Bootstrap'],
+      techStack: ['Java 17', 'Maven', 'MySQL', 'Jetty', 'MapBox', 'Bootstrap 5'],
       image: '/assets/Hotel-Reviews.png',
       aosImage: 'fade-right'
     },

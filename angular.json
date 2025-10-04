@@ -53,12 +53,7 @@
             "styles": [
               "src/global_styles.css"
             ],
-            "tsConfig": "tsconfig.app.json",
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "tsConfig": "tsconfig.app.json"
           }
         },
         "serve": {

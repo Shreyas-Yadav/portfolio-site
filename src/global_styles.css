@@ -16,12 +16,13 @@ html {
   scrollbar-color: grey black;
   scroll-behavior: smooth;
   background-color: black;
-  color: black;
+  color: var(--lightest-slate);
 }
 
 body {
   @apply antialiased;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html,

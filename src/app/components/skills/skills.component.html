@@ -2,7 +2,19 @@
     <div class="mt-12" data-aos="fade-up" data-aos-duration="1000">
         <h3 class="text-2xl font-semibold mb-4 section-title">Skills</h3>
 
-        <h4 class="text-xl font-semibold mb-2 text-yellow-500">Front-end</h4>
+        <h4 class="text-xl font-semibold mb-2 text-yellow-500">Generative AI</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            @for (ai of generativeAI; track ai) {
+            <div class="p-4 rounded-lg shadow-md text-center flex flex-col items-center">
+                <img [src]="ai.logo" [alt]="ai.name"
+                    class="h-10 w-10 mb-2 transition-transform duration-300 transform hover:scale-110"
+                    [class.invert]="ai?.isInvertLogo">
+                <span class="font-semibold text-lightest-slate">{{ ai.name }}</span>
+            </div>
+            }
+        </div>
+
+        <h4 class="text-xl font-semibold mb-2 mt-8 text-yellow-500">Front-end</h4>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
             @for (frontend of frontends; track frontend) {
             <div class="p-4 rounded-lg shadow-md text-center flex flex-col items-center">
