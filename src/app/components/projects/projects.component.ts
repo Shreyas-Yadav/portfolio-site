@@ -9,6 +9,63 @@ import { link } from 'node:fs';
   templateUrl: './projects.component.html'
 })
 export class ProjectsComponent {
+  selectedProject: any = null;
+  isModalOpen = false;
+
+  openModal(project: any) {
+    this.selectedProject = project;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedProject = null;
+  }
+
+  techLogos: { [key: string]: string } = {
+    'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    'React': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/react/react-original.svg',
+    'TypeScript': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/typescript/typescript-original.svg',
+    'Socket.IO': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg',
+    'OpenAI API': 'assets/openai.svg',
+    'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg',
+    'Redis': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg',
+    'Python': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg',
+    'LlamaIndex': 'assets/llamaindex-color.svg',
+    'Arize Phoenix': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg',
+    'LLM Evaluation': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg',
+    'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    'NS-3 Simulator': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg',
+    'Network QoS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    'C': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+    'Wireshark': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg',
+    'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg',
+    'OpenCV': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg',
+    'PID Controller': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg',
+    'Computer Vision': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg',
+    'Typescript': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/typescript/typescript-original.svg',
+    'Next.JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    'NeonDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
+    'Tailwind': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg',
+    'WebSockets': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg',
+    'Openrouter': 'assets/openrouter.svg',
+    'JS/HTML/CSS': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/javascript/javascript-original.svg',
+    'Java 17': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/java/java-original.svg',
+    'Maven': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg',
+    'MySQL': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mysql/mysql-original.svg',
+    'Jetty': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/java/java-original.svg',
+    'MapBox': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+    'Bootstrap 5': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/bootstrap/bootstrap-original.svg',
+    'Node': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/nodejs/nodejs-original.svg',
+    'Express': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/express/express-original.svg',
+    'MongoDB': 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mongodb/mongodb-original.svg',
+  };
+
+  getTechLogo(tech: string): string {
+    return this.techLogos[tech] || 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/devicon/devicon-original.svg';
+  }
+
   projects = [
     {
       title: 'EasyShare - Real-time Collaboration Platform',
